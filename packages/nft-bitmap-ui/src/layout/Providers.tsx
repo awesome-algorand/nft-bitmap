@@ -1,4 +1,4 @@
-import {NetworkId, WalletId, WalletManager, WalletProvider} from "@txnlab/use-wallet-react";
+import {NetworkId, SupportedWallet, WalletId, WalletManager, WalletProvider} from "@txnlab/use-wallet-react";
 import {createContext, PropsWithChildren, useContext, useMemo, useState} from "react";
 import type {AlgodSettings} from "nft-bitmap-react/components";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -45,7 +45,7 @@ export function BitmapWalletProvider({children}: PropsWithChildren) {
     const {algod, network} = useAlgod()
     console.log(algod)
     const manager = useMemo(() => {
-        const wallets = [
+        const wallets: SupportedWallet[] = [
             WalletId.MNEMONIC,
             WalletId.PERA,
             WalletId.DEFLY,
@@ -61,30 +61,11 @@ export function BitmapWalletProvider({children}: PropsWithChildren) {
         if(import.meta.env.DEV) wallets.push({
             id:WalletId.KMD,
             options:{
-                //@ts-expect-error, this is a dev only feature
                 baseServer: algod.baseServer,
             }
         })
         return new WalletManager({
-            wallets: [
-                {
-                    id:WalletId.KMD,
-                    options:{
-                        baseServer: algod.baseServer,
-                    }
-                },
-                WalletId.MNEMONIC,
-                WalletId.PERA,
-                WalletId.DEFLY,
-                {
-                  id: WalletId.LUTE,
-                    options: {
-                        siteName: 'Nft Bitmap',
-                    }
-                },
-                WalletId.KIBISIS,
-                WalletId.EXODUS,
-            ],
+            wallets,
             network,
             algod
         })
