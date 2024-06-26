@@ -1,0 +1,63 @@
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+body, html {
+    background: rgb(0,204,192);
+    background: linear-gradient(90deg, rgba(0,204,192,0.24413515406162467) 0%, rgba(0,204,120,0.5914740896358543) 100%);
+}
+.nft-bitmap.live.has-color .nft-bitmap-cell:hover {
+        background-color: var(--selected-color) !important;
+}
+.nft-bitmap-cell {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: inherit;
+    outline: inherit;
+}
+.loading {
+    z-index: 100;
+    animation: glow 1.5s infinite;
+}
+.nft-bitmap.live.no-color {
+    cursor: not-allowed;
+}
+.nft-bitmap.live.paint:hover {
+    cursor: url("/paint.svg") 2 115, auto;
+}
+.nft-bitmap.live.erase:hover {
+    cursor: url("/wipe.svg") 2 115, auto;
+}
+.nft-bitmap.live.bucket:hover {
+    cursor: url("/bucket.svg") 55 125, auto;
+}
+.nft-bitmap.live.point:hover {
+    cursor: crosshair;
+}
+.nft-bitmap.has-color .nft-bitmap-cell:hover {
+    z-index: 100;
+    animation: glow 1.5s infinite;
+    animation-direction: alternate;
+
+}
+.nft-bitmap-cell.active {
+    z-index: 100;
+    animation: glow 1.5s infinite;
+    animation-direction: alternate;
+}
+.color-selector.no-color {
+    z-index: 100;
+    animation: glow 1.5s infinite;
+    animation-direction: alternate;
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 2px -2px black;
+    }
+    to {
+        box-shadow: 0 0 2px 2px black;
+    }
+}

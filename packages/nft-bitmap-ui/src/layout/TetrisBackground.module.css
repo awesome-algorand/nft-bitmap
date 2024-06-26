@@ -1,0 +1,34 @@
+.tetris-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+    overflow: hidden !important;
+}
+.tetris-cell {
+    --cell-size: calc(100vw/32);
+    --animation-offset: 0;
+    --animation-duration: 15s;
+    --animation-delay: 0s;
+    z-index: -10;
+    width: var(--cell-size) !important;
+    height: var(--cell-size) !important;
+    position: absolute;
+    top: -60px;
+    left: calc(var(--cell-size) * var(--animation-offset));
+    animation: drop 15s ease-in-out infinite,
+    sideWays 4s ease-in-out infinite alternate;
+    animation-delay: var(--animation-delay);
+    animation-duration: var(--animation-duration);
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(120vh);
+    }
+}

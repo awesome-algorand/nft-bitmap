@@ -1,0 +1,13 @@
+{
+  "name": "nft-bitmap",
+  "private": true,
+  "description": "Workspace for nft-bitmap",
+  "author": "Michael Feher",
+  "license": "AGPL-3.0-or-later",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run gen:client -w nft-bitmap-kit && npm run build -w nft-bitmap-kit && npm run build -w nft-bitmap-react && npm run build -w nft-bitmap-ui"
+  }
+}

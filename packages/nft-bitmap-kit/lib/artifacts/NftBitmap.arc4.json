@@ -1,0 +1,114 @@
+{
+  "name": "NftBitmap",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "Create the application with the default image",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateApplication",
+      "desc": "Update the application",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "deleteApplication",
+      "desc": "Delete the application",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "itoa",
+      "desc": "Convert an integer to a string",
+      "args": [
+        {
+          "name": "x",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "atoi",
+      "desc": "Convert a string to an integer",
+      "args": [
+        {
+          "name": "x",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      }
+    },
+    {
+      "name": "placeRow",
+      "desc": "Allow the creator to place a row",
+      "args": [
+        {
+          "name": "y",
+          "type": "uint64"
+        },
+        {
+          "name": "row",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "place",
+      "desc": "Place a Pixel",
+      "args": [
+        {
+          "name": "x",
+          "type": "uint64",
+          "desc": "The x coordinate of the pixel"
+        },
+        {
+          "name": "y",
+          "type": "uint64",
+          "desc": "The y coordinate of the pixel"
+        },
+        {
+          "name": "color",
+          "type": "uint64",
+          "desc": "The color of the pixel"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "get",
+      "desc": "Get the color of a pixel",
+      "args": [
+        {
+          "name": "x",
+          "type": "uint64"
+        },
+        {
+          "name": "y",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      }
+    }
+  ]
+}
