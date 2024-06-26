@@ -89,10 +89,10 @@ export function App(){
     function handleCellClick(e: ReactMouseEvent<HTMLButtonElement, MouseEvent>, color: Color, position: Position){
 
         if(mode === 'view' && selectedColor) {
-            if(!manager.activeAddress) {
+            if(!manager.activeAddress && tool !== 'wallet') {
                 setTool('wallet')
-                return
             }
+            if(!manager.activeAddress) return
             switch (tool) {
                 case 'point': {
                     if (selectedColor.hex === color.hex) return
