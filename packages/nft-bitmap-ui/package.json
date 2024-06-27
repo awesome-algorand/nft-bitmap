@@ -1,5 +1,5 @@
 {
-  "name": "nft-bitmap-ui",
+  "name": "@nft-bitmap/ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "@tanstack/react-query": "^5.48.0",
     "@tanstack/react-query-devtools": "^5.48.0",
     "@txnlab/use-wallet-react": "^3.0.0-rc.2",
+    "@walletconnect/socket-transport": "github:awesome-algorand/walletconnect-socket-transport",
     "lute-connect": "^1.2.0",
     "nft-bitmap-react": "^0.0.0",
     "react": "^18.3.1",

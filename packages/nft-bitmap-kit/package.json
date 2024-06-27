@@ -1,5 +1,5 @@
 {
-  "name": "nft-bitmap-kit",
+  "name": "@nft-bitmap/kit",
   "version": "0.0.1",
   "description": "Creates NFTs from a BitMap in GlobalState",
   "type": "module",
@@ -9,8 +9,8 @@
       "import": "./lib/index.js"
     },
     "./client": {
-        "types": "./lib/client.d.ts",
-        "import": "./lib/client.js"
+      "types": "./lib/client.d.ts",
+      "import": "./lib/client.js"
     },
     "./colors": {
       "types": "./lib/colors.d.ts",
@@ -29,13 +29,20 @@
     "gen": "npm run gen:teal && npm run gen:client",
     "gen:client": "algokitgen generate client  --output ./src/client.ts -a ./lib/artifacts/NftBitmap.arc32.json",
     "gen:teal": "mkdirp ./lib/artifacts && tealscript ./src/NftBitmap.algo.ts ./lib/artifacts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release -e semantic-release-monorepo --dry-run"
   },
   "author": "Michael Feher",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
     "@algorandfoundation/algokit-client-generator": "^3.0.4",
     "@algorandfoundation/tealscript": "^0.96.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
     "@txnlab/use-wallet": "^3.0.0-rc.2",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
@@ -46,6 +53,8 @@
     "eslint-plugin-prettier": "^5.1.3",
     "mkdirp": "^3.0.1",
     "nodemon": "^3.1.3",
+    "semantic-release": "^24.0.0",
+    "semantic-release-monorepo": "^8.0.2",
     "wait-on": "^7.2.0"
   },
   "peerDependencies": {
@@ -54,5 +63,38 @@
   },
   "dependencies": {
     "async-mutex": "^0.5.0"
+  },
+  "release": {
+    "extends": "semantic-release-monorepo",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "chore(release): NftBitmap Kit \n\n${nextRelease.notes}"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "successComment": false
+        }
+      ]
+    ],
+    "branches": [
+      "release/*",
+      "next",
+      {
+        "name": "main",
+        "prerelease": "canary"
+      }
+    ]
   }
 }
