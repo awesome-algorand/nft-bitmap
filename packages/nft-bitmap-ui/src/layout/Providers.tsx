@@ -37,7 +37,7 @@ export function AlgodProvider({children}: PropsWithChildren) {
     )
 }
 
-export function useAlgod() {
+function useAlgod() {
     return useContext(AlgodContext)
 }
 

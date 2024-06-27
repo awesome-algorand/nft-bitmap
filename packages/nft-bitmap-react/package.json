@@ -29,7 +29,8 @@
     "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build-storybook": "storybook build",
-    "release": "semantic-release -e semantic-release-monorepo --dry-run"
+    "release": "semantic-release -e semantic-release-monorepo --dry-run",
+    "chromatic": "npx chromatic --project-token=chpt_9dbd3c13d9e2fac"
   },
   "peerDependencies": {
     "@algorandfoundation/algokit-utils": "^6.0.5",
@@ -65,6 +66,7 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.5.4",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",

@@ -9,6 +9,9 @@
     "packages/*"
   ],
   "scripts": {
+    "lint": "npm run lint -ws --if-present",
+    "test": "npm run test -ws --if-present",
+    "chromatic": "npm run chromatic -ws --if-present",
     "build": "npm run gen:client -w @nft-bitmap/kit && npm run build -w @nft-bitmap/kit && npm run build -w @nft-bitmap/react && npm run build -w @nft-bitmap/ui",
     "release": "npm run release -w @nft-bitmap/kit && npm run release -w @nft-bitmap/react"
   }

@@ -29,7 +29,7 @@
     "gen": "npm run gen:teal && npm run gen:client",
     "gen:client": "algokitgen generate client  --output ./src/client.ts -a ./lib/artifacts/NftBitmap.arc32.json",
     "gen:teal": "mkdirp ./lib/artifacts && tealscript ./src/NftBitmap.algo.ts ./lib/artifacts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "release": "semantic-release -e semantic-release-monorepo --dry-run"
   },
   "author": "Michael Feher",
