@@ -13,7 +13,7 @@
     "@agoralabs-sh/avm-web-provider": "^1.6.2",
     "@blockshake/defly-connect": "^1.1.6",
     "@nft-bitmap/kit": "^0.0.1",
-    "@nft-bitmap/ui": "^0.0.0",
+    "@nft-bitmap/react": "^0.0.0",
     "@perawallet/connect": "^1.3.4",
     "@tanstack/react-query": "^5.48.0",
     "@tanstack/react-query-devtools": "^5.48.0",
