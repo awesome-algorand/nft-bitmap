@@ -23,6 +23,7 @@ jobs:
       - name: Lint Codebase
         run: npm run lint
       - name: Unit Tests
+        if: matrix.node-version != '22.x'
         run: npm run test
       - name: Publish code coverage
         if: matrix.node-version == '22.x'
@@ -31,6 +32,3 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CODE_CLIMATE_REPORTER_ID}}
         with:
           coverageCommand: npm run coverage
-      - name: Publish Chromatic
-        if: matrix.node-version == '22.x'
-        run: npm run chromatic
