@@ -1,7 +1,7 @@
 import {create} from 'zustand'
 import {persist} from 'zustand/middleware'
-import {getRandomBitmap, getSingleColorBitmap, type Color} from "nft-bitmap-kit/colors";
-import type {Position} from "@/components/Position";
+import {getRandomBitmap, getSingleColorBitmap, type Color} from "@nft-bitmap/kit/colors";
+import type {Position} from "@nft-bitmap/kit";
 
 export interface ImageState {
     image: Color[][]

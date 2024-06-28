@@ -1,5 +1,5 @@
 import {useCallback, useMemo} from "react";
-import {Color, COLORS} from "nft-bitmap-kit/colors";
+import {Color, COLORS} from "@nft-bitmap/kit/colors";
 import {useSearchParams} from "react-router-dom";
 
 export function useColorParam(){

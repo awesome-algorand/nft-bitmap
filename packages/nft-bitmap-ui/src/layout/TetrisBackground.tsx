@@ -1,7 +1,7 @@
 import {useMemo} from "react";
-import {COLORS} from "nft-bitmap-kit/colors";
+import {COLORS} from "@nft-bitmap/kit/colors";
 
-import {Cell} from "nft-bitmap-react/components";
+import {Cell} from "@nft-bitmap/react/components";
 import styles from './TetrisBackground.module.css'
 
 /**

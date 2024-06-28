@@ -1,6 +1,6 @@
 import {useMemo} from "react";
 
-import {NftBitmapClient} from "nft-bitmap-kit";
+import {NftBitmapClient} from "@nft-bitmap/kit/client";
 
 import type {TransactionSignerAccount} from "@algorandfoundation/algokit-utils/types/account";
 import type {WalletManager} from "@txnlab/use-wallet-react";

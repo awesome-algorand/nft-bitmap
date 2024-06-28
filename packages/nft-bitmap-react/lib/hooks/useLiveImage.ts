@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 import {Algodv2, decodeUint64} from "algosdk";
-import {Color, COLORS} from "nft-bitmap-kit/colors";
+import {Color, COLORS} from "@nft-bitmap/kit/colors";
 import {toByteArray} from "base64-js";
 
 type KeyPair = { key: string, value: { bytes: string } }

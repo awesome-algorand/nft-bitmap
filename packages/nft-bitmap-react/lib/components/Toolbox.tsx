@@ -1,5 +1,5 @@
 import {CSSProperties, PropsWithChildren, useMemo, useState} from "react";
-import {getColorPaletteBitmap, type Color} from "nft-bitmap-kit/colors";
+import {getColorPaletteBitmap, type Color} from "@nft-bitmap/kit/colors";
 import {UploadIconButton, UploadImageControl} from "./controls/Upload.tsx";
 import {SettingsControl, SettingsIconButton} from "./controls/Settings.tsx";
 import {SaveControl, SaveIconButton} from "./controls/Save.tsx";

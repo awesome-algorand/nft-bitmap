@@ -1,4 +1,4 @@
-import {getRandomBitmap} from "nft-bitmap-kit/colors";
+import {getRandomBitmap} from "@nft-bitmap/kit/colors";
 import {Bitmap, BitmapProps} from "./Bitmap.tsx";
 import {useCellSize} from "../hooks/useCellSize.ts";
 

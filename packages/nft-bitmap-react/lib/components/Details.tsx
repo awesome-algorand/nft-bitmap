@@ -1,5 +1,5 @@
-import type {Color} from "nft-bitmap-kit/colors";
-import {Position} from "./Position";
+import type {Color} from "@nft-bitmap/kit/colors";
+import {Position} from "@nft-bitmap/kit";
 
 export type DetailsProps = {
     color: Color,

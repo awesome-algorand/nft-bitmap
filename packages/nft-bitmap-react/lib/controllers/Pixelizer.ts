@@ -3,7 +3,7 @@
  * @author José Moreira @ <https://github.com/giventofly/pixelit>
  * @author Michael Feher @ <https://github.com/PhearZero>
  **/
-import {Color, getRandomBitmap} from "nft-bitmap-kit/colors";
+import {Color, getRandomBitmap} from "@nft-bitmap/kit/colors";
 
 export const DRAWFROM_NOT_DEFINED_MESSAGE = "drawfrom is not defined";
 export const DRAWTO_NOT_DEFINED_MESSAGE = "drawto is not defined";

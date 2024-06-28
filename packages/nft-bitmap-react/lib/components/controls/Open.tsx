@@ -1,5 +1,5 @@
 import {useGalleryStore} from "@/stores.ts";
-import {Color} from "nft-bitmap-kit/colors";
+import {Color} from "@nft-bitmap/kit/colors";
 import {ToolIconButton, IconButtonProps} from "../ToolIconButton.tsx";
 import {ToolName} from "../Toolbox.tsx";
 import {ControlProps} from "./ControlProps.ts";

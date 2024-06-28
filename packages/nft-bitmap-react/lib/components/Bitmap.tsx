@@ -4,8 +4,8 @@ import type {
     CSSProperties,
     MouseEvent as ReactMouseEvent
 } from "react";
-import {type Color, getRandomBitmap} from "nft-bitmap-kit/colors";
-import {type Position} from "./Position";
+import {type Color, getRandomBitmap} from "@nft-bitmap/kit/colors";
+import {type Position} from "@nft-bitmap/kit";
 import {Cell} from './Cell.tsx'
 import {NoOp} from "../controllers/NoOp.ts";
 

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Color, COLORS, getRandomBitmap} from "nft-bitmap-kit/colors";
+import {Color, COLORS, getRandomBitmap} from "@nft-bitmap/kit/colors";
 import {Pixelizer, RgbColor} from '@/controllers/Pixelizer.ts'
 import {useEditorImage} from "@/stores.ts";
 import {ToolIconButton, IconButtonProps} from "../ToolIconButton.tsx";

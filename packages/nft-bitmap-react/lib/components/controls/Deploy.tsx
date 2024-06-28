@@ -1,7 +1,7 @@
 import {ToolIconButton, IconButtonProps} from "../ToolIconButton.tsx";
-import {Color} from "nft-bitmap-kit/colors";
+import {Color} from "@nft-bitmap/kit/colors";
 import {AtomicTransactionComposer} from "algosdk";
-import {NftBitmapClient} from "nft-bitmap-kit";
+import {NftBitmapClient} from "@nft-bitmap/kit/client";
 import type {TransactionSignerAccount} from "@algorandfoundation/algokit-utils/types/account";
 import {Transaction} from "algosdk";
 import {ControlProps} from "./ControlProps.ts";

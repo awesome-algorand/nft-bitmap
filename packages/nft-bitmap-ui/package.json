@@ -12,13 +12,14 @@
   "dependencies": {
     "@agoralabs-sh/avm-web-provider": "^1.6.2",
     "@blockshake/defly-connect": "^1.1.6",
+    "@nft-bitmap/kit": "^0.0.1",
+    "@nft-bitmap/ui": "^0.0.0",
     "@perawallet/connect": "^1.3.4",
     "@tanstack/react-query": "^5.48.0",
     "@tanstack/react-query-devtools": "^5.48.0",
     "@txnlab/use-wallet-react": "^3.0.0-rc.2",
     "@walletconnect/socket-transport": "github:awesome-algorand/walletconnect-socket-transport",
     "lute-connect": "^1.2.0",
-    "nft-bitmap-react": "^0.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0"

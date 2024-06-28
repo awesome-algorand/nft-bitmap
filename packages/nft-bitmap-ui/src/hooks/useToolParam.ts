@@ -1,5 +1,5 @@
 import {useCallback, useMemo} from "react";
-import {ToolName} from "nft-bitmap-react/components";
+import {ToolName} from "@nft-bitmap/react/components";
 import {useSearchParams} from "react-router-dom";
 
 export function useToolParam() {

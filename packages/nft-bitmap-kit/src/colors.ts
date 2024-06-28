@@ -1,4 +1,4 @@
-import type { Position } from "nft-bitmap-react/lib/components/Position";
+import type { Position } from "./Position.ts";
 
 export type Color = {
   key?: string;
