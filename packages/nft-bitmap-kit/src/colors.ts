@@ -1,5 +1,4 @@
-import type { Position } from "nft-bitmap-react/lib/components/Position";
-import { AppState } from "@algorandfoundation/algokit-utils/types/app";
+import type { Position } from "./Position.ts";
 
 export type Color = {
   key?: string;
@@ -24,7 +23,7 @@ export function getSingleColorBitmap(
     .map((row) => row.map(() => color));
 }
 export function getColorPaletteBitmap(height = 4, width = 8) {
-  if (height * width > COLORS.length) {
+  if (height * width < COLORS.length) {
     throw new Error("Palette is too small for the image");
   }
   let idx = 0;
@@ -51,25 +50,6 @@ export function fillColor(image: Color[][], color: Color, position: Position) {
   return image;
 }
 
-export function globalStateToImage(
-  globalState: AppState,
-  width: number,
-  height: number,
-): Color[][] {
-  console.log(globalState, width, height);
-
-  const image = Array(height)
-    .fill(Array(width).fill(COLORS[0]))
-    .map((row) => row.map(() => COLORS[0]));
-
-  // globalState.forEach(({ keyBase64, valueBase64 }, i) => {
-  //     const stuff = btoa(valueBase64)
-  //       console.log(stuff)
-  // image[i][position.x]
-  // image[y][x] = COLORS[colorIdx];
-  // });
-  return image;
-}
 export const COLORS: Color[] = [
   { name: "Boysenberry", hex: "#6d001a", key: "01" },
   { name: "Crimson Glory", hex: "#be0039", key: "02" },

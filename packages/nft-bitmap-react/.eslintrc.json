@@ -11,6 +11,7 @@
     "plugin:storybook/recommended"
   ],
   "ignorePatterns": [
+    "lib/*",
     "dist",
     ".eslintrc.cjs"
   ],

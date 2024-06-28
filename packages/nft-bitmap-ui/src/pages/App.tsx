@@ -1,8 +1,9 @@
 import {useEffect, useMemo, useState, MouseEvent as ReactMouseEvent} from "react";
-import {Color, COLORS, fillColor} from "nft-bitmap-kit/colors";
-import {type Position, Toolbox, Details, BitmapViewer} from "nft-bitmap-react/components";
-import {useNFTClient, useLiveImage, useTransactionSelector} from "nft-bitmap-react/hooks"
-import {useEditorImage} from "nft-bitmap-react/stores";
+import {Color, COLORS, fillColor} from "@nft-bitmap/kit/colors";
+import {Position} from "@nft-bitmap/kit";
+import {Toolbox, Details, BitmapViewer} from "@nft-bitmap/react/components";
+import {useNFTClient, useLiveImage, useTransactionSelector} from "@nft-bitmap/react/hooks"
+import {useEditorImage} from "@nft-bitmap/react/stores";
 import {useMove} from "react-aria";
 import {useWallet, WalletManager} from "@txnlab/use-wallet-react";
 import {useNavigate, useParams} from "react-router-dom";

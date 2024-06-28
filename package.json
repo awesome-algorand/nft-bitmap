@@ -9,10 +9,17 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "npm run dev -w @nft-bitmap/ui",
     "lint": "npm run lint -ws --if-present",
+    "coverage": "vitest run --coverage",
+    "test-ui": "vitest --ui --coverage",
     "test": "npm run test -ws --if-present",
     "chromatic": "npm run chromatic -ws --if-present",
     "build": "npm run gen:client -w @nft-bitmap/kit && npm run build -w @nft-bitmap/kit && npm run build -w @nft-bitmap/react && npm run build -w @nft-bitmap/ui",
     "release": "npm run release -w @nft-bitmap/kit && npm run release -w @nft-bitmap/react"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.0",
+    "vitest": "^1.6.0"
   }
 }

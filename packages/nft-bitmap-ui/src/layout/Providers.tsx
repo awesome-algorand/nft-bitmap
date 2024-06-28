@@ -1,6 +1,6 @@
 import {NetworkId, SupportedWallet, WalletId, WalletManager, WalletProvider} from "@txnlab/use-wallet-react";
 import {createContext, PropsWithChildren, useContext, useMemo, useState} from "react";
-import type {AlgodSettings} from "nft-bitmap-react/components";
+import type {AlgodSettings} from "@nft-bitmap/react/components";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 const queryClient = new QueryClient()
 
