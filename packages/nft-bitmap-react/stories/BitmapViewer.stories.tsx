@@ -1,11 +1,12 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { fn } from '@storybook/test';
 import { BitmapViewer as Component } from '../lib/components/BitmapViewer';
-
+import image from './fixtures/image';
 const meta: Meta<typeof Component> = {
     component: Component,
     title: 'Image',
     args: {
+        image,
         onCellClick: fn(),
         onBitmapEnter: fn(),
         onBitmapLeave: fn(),
