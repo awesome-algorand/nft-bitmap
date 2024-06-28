@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["./src/**.algo.ts", "./lib/**/*", "./scripts/**/*"]
+  "exclude": ["./src/**.algo.ts", "./lib/**/*", "./scripts/**/*", "./src/**.spec.ts"]
 }

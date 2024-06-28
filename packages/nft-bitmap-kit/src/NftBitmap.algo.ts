@@ -4,7 +4,7 @@ import { Contract } from "@algorandfoundation/tealscript";
  * Algorand Place
  * @description The best place to put your pixels
  */
-class NftBitmap extends Contract {
+export class NftBitmap extends Contract {
   /**
    * The image
    */
