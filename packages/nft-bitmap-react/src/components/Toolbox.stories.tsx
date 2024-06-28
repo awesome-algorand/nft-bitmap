@@ -1,10 +1,10 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Toolbox as Component } from '../lib/components/Toolbox';
+import { Toolbox as Component } from './Toolbox';
 
 const meta: Meta<typeof Component> = {
     component: Component,
-    // title: 'Toolbox',
+    title: 'Toolbox',
     args: {
         onToolChange: fn(),
         onDeploy: fn(),

@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Cell as Component } from '../lib/components/Cell';
+import { Cell as Component } from './Cell';
 
 const meta: Meta<typeof Component> = {
     component: Component,

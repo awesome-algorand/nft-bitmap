@@ -18,9 +18,10 @@ export function OpenIcon(){
     )
 }
 
-export function OpenIconButton(props: IconButtonProps){
+export function OpenIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={OPEN_TOOL_NAME}
             title={OPEN_TOOL_TITLE}
             {...props}
         >

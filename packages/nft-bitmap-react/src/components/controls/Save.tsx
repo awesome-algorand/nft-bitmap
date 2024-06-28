@@ -17,9 +17,10 @@ export function SaveIcon(){
     )
 }
 
-export function SaveIconButton(props: IconButtonProps) {
+export function SaveIconButton(props: Omit<IconButtonProps, 'name'>) {
     return (
         <ToolIconButton
+            name={SAVE_TOOL_NAME}
             title={SAVE_TOOL_TITLE}
             {...props}
         >

@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { fn } from '@storybook/test';
-import { BitmapViewer as Component } from '../lib/components/BitmapViewer';
-import image from './fixtures/image';
+import { BitmapViewer as Component } from './BitmapViewer';
+import image from './__fixtures__/image';
 const meta: Meta<typeof Component> = {
     component: Component,
     title: 'Image',

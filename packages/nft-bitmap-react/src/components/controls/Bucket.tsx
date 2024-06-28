@@ -13,9 +13,10 @@ export function BucketIcon() {
     )
 }
 
-export function BucketIconButton(props: IconButtonProps) {
+export function BucketIconButton(props: Omit<IconButtonProps, 'name'>) {
     return (
         <ToolIconButton
+            name={BUCKET_TOOL_NAME}
             title={BUCKET_TOOL_TITLE}
             {...props}
         >

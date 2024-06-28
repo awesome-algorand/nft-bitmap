@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { fn } from '@storybook/test';
-import { ToolIconButton as Component } from '../lib/components/ToolIconButton';
+import { ToolIconButton as Component } from './ToolIconButton';
 
 const meta: Meta<typeof Component> = {
     component: Component,

@@ -23,9 +23,10 @@ export function ModeIcon({mode}: {mode: ModeName}){
     )
 }
 
-export function ModeIconButton({mode, ...props}: {mode: ModeName} & IconButtonProps){
+export function ModeIconButton({mode, ...props}: {mode: ModeName} & Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={MODE_TOOL_NAME}
             title={mode === 'edit' ? MODE_TOOL_TITLE_VIEW : MODE_TOOL_TITLE_EDIT}
             {...props}
         >

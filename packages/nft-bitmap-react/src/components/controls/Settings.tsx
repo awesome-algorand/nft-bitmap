@@ -17,9 +17,10 @@ export function SettingsIcon(){
     )
 }
 
-export function SettingsIconButton(props: IconButtonProps){
+export function SettingsIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={SETTINGS_TOOL_NAME}
             title={SETTINGS_TOOL_TITLE}
             {...props}
         >

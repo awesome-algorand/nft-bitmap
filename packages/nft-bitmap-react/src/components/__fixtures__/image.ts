@@ -1,3 +1,4 @@
+import type {Color} from '@nft-bitmap/kit/colors'
 export default [
   [
     {
@@ -12927,4 +12928,4 @@ export default [
       "key": "25"
     }
   ]
-]
+] as Color[][]

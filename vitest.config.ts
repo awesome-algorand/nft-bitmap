@@ -2,17 +2,17 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
+    reporters: ['html'],
     coverage: {
-      reporter:  ['lcov', 'html'],
+      reporter:  ['json', 'html', 'lcov', 'text'],
+      include:[
+            "packages/nft-bitmap-kit/src/*",
+            "packages/nft-bitmap-react/src/*",
+      ],
       exclude: [
-          "vitest.workspace.ts",
-          "docs/*",
-          "packages/nft-bitmap-kit/lib/*",
-          "packages/nft-bitmap-kit/src/index.ts",
-          "packages/nft-bitmap-kit/coverage/*",
-          "packages/nft-bitmap-react/.storybook",
-          "packages/nft-bitmap-react/stories/*",
-          "packages/nft-bitmap-ui/*"
+          "**/*.stories.tsx",
+          "**/__fixtures__/**",
+          "**/index.ts",
       ],
     },
   },

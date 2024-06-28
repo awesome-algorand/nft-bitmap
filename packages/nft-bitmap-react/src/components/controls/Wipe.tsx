@@ -13,9 +13,10 @@ export function WipeIcon(){
     )
 }
 
-export function WipeIconButton(props: IconButtonProps){
+export function WipeIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={WIPE_TOOL_NAME}
             title={props.disabled ? `${WIPE_TOOL_TITLE} (Disabled)` : WIPE_TOOL_TITLE}
             {...props}
         >

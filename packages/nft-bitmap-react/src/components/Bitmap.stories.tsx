@@ -1,8 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Bitmap as Component } from '../lib/components/Bitmap';
-import image from './fixtures/image';
-
+import {fn, userEvent, within, expect} from '@storybook/test';
+import { Bitmap as Component } from './Bitmap';
+import image from './__fixtures__/image';
 const meta: Meta<typeof Component> = {
     component: Component,
     title: 'Image',
@@ -12,7 +11,13 @@ const meta: Meta<typeof Component> = {
         onBitmapEnter: fn(),
         onBitmapLeave: fn(),
         cellSize: 10,
-    }
+    },
+    // Integration Testing
+    play: async ({ args, canvasElement }) => {
+        const canvas = within(canvasElement);
+        await userEvent.click(canvas.getAllByRole('img')[0]);
+        await expect(args.onCellClick).toHaveBeenCalled();
+    },
 };
 
 export default meta;

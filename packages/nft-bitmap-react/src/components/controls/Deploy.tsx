@@ -19,9 +19,10 @@ export function DeployIcon(){
     )
 }
 
-export function DeployIconButton(props: IconButtonProps){
+export function DeployIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={DEPLOY_TOOL_NAME}
             title={DEPLOY_TOOL_TITLE}
             {...props}
         >

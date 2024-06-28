@@ -22,9 +22,10 @@ export function DisconnectIcon(){
     )
 }
 
-export function WalletIconButton(props: IconButtonProps) {
+export function WalletIconButton(props: Omit<IconButtonProps, 'name'>) {
     return (
         <ToolIconButton
+            name={WALLET_TOOL_NAME}
             title={WALLET_TOOL_TITLE}
             {...props}
         >

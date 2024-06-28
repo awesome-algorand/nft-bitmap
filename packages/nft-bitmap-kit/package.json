@@ -29,7 +29,7 @@
     "gen": "npm run gen:teal && npm run gen:client",
     "gen:client": "algokitgen generate client  --output ./src/client.ts -a ./lib/artifacts/NftBitmap.arc32.json",
     "gen:teal": "mkdirp ./lib/artifacts && tealscript ./src/NftBitmap.algo.ts ./lib/artifacts",
-    "test": "vitest run --coverage",
+    "test": "vitest run",
     "release": "semantic-release -e semantic-release-monorepo --dry-run"
   },
   "author": "Michael Feher",

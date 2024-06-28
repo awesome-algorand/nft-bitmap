@@ -1,7 +1,6 @@
 import {PointIconButton} from "./Point.tsx";
 import {PaintIconButton} from "./Paint.tsx";
-import {HTMLAttributes} from "react";
-import {ToolIconButton} from "../ToolIconButton.tsx";
+import {IconButtonProps, ToolIconButton} from "../ToolIconButton.tsx";
 import {BUCKET_TOOL_TITLE, BucketIconButton} from "./Bucket.tsx";
 import {WipeIconButton} from "./Wipe.tsx";
 import {UploadIconButton} from "./Upload.tsx";
@@ -25,9 +24,10 @@ export function HelpIcon(){
         </svg>
     )
 }
-export function HelpIconButton(props: HTMLAttributes<HTMLButtonElement>){
+export function HelpIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={HELP_TOOL_NAME}
             title={HELP_TOOL_TITLE}
             {...props}
         >

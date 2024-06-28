@@ -16,9 +16,10 @@ export function UploadIcon(){
         </svg>
     )
 }
-export function UploadIconButton(props: IconButtonProps){
+export function UploadIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={UPLOAD_TOOL_NAME}
             title={UPLOAD_TOOL_TITLE}
             {...props}
         >

@@ -13,9 +13,10 @@ export function PointIcon(){
     )
 }
 
-export function PointIconButton(props: IconButtonProps){
+export function PointIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={POINT_TOOL_NAME}
             title={POINT_TOOL_TITLE}
             {...props}
         >

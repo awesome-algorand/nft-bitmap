@@ -13,9 +13,10 @@ export function PaintIcon(){
     )
 }
 
-export function PaintIconButton(props: IconButtonProps){
+export function PaintIconButton(props: Omit<IconButtonProps, 'name'>){
     return (
         <ToolIconButton
+            name={PAINT_TOOL_NAME}
             title={props.disabled ? `${PAINT_TOOL_TITLE} (Disabled)` : PAINT_TOOL_TITLE}
             {...props}
         >

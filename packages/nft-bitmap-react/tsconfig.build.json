@@ -1,4 +1,5 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["lib"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.tsx", "**/*.stories.tsx", "**/__fixtures__/**"]
 }
